@@ -23,8 +23,18 @@ app.get('/', function(req, res){
 	res.send('');
 });
 
+//python flask microservice
+app.get('http://127.0.0.1:5000/', function(req,res){
+	res.send('');
+});
+
+//java spark microservice
+app.get('http://localhost:8080/', function(req,res){
+
+});
 
 
+app.get('')
 app.get('/api/genres', function(req, res){
 	Genre.getGenres(function(err, genres){
 		if(err){
