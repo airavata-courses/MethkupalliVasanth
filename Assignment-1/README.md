@@ -1,6 +1,10 @@
 # MethkupalliVasanth
 
+<<<<<<< HEAD
 Under Construction! Error with Python flask accessing the DB, in the process of fixing it.
+=======
+Under Construction! Small Error with Python flask accessing the DB, in the process of fixing it.
+>>>>>>> 8400617f290a57684518055d3714e37aba5f5d08
 ## Technologies Used:
 
 JavaScript (Node.js)
