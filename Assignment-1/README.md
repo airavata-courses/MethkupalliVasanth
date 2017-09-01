@@ -1,6 +1,5 @@
 # MethkupalliVasanth
- HEAD
-
+ 
 Under Construction! Error with Python flask accessing the DB, in the process of fixing it.
 
 ## Technologies Used:
