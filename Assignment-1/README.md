@@ -61,3 +61,7 @@ http://localhost:4567/hello/vasanth
 > python app.py
 
 Check the functioning of the microservice from the orchestrator or use the link 
+
+> http://127.0.0.1:5000/ 
+
+The above link, just displays a "Hello World Message", working on to include more functionality in this microservice.
