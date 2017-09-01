@@ -29,7 +29,10 @@ PYTHON (Flask)
 1. Go to the node-js-orchestrator folder and run the following command
 > node server.js
 
-You can test it at http://localhost:20000/
+You can test it at 
+
+> http://localhost:20000/
+
 
 2. Before you access the microservices from the UI, start the individual microservices first.
 
@@ -39,7 +42,10 @@ You can test it at http://localhost:20000/
 > node app.js
 
 You can test it by accessing the service from the orchestrator above.
-Also, you can check this http://localhost:3000/api/books
+
+Also, you can check this at 
+
+> http://localhost:3000/api/books
 
 Which shows us the database of books from the MongoDB
 
