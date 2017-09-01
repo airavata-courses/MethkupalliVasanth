@@ -1,6 +1,6 @@
 # MethkupalliVasanth
 
-Under Construction! Small Error with Python flask accessing the DB, in the process of fixing it.
+Under Construction! Error with Python flask accessing the DB, in the process of fixing it.
 ## Technologies Used:
 
 JavaScript (Node.js)
