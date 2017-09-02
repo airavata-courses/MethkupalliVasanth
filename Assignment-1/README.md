@@ -21,7 +21,7 @@ Create a database named bookstore in MongoDB cd into the mongo-db file directory
    > $ mongoimport --db bookstore --collection genres --type csv --file genre.csv --headerline
  
 2. Install Node.js
-3. Install Python 2.7.x and the latest Flask version.
+3. Install Python 2.7.x, the latest Flask version and the pymongo dependency.
 4. Install maven for running SparkJava Microservice.
 
 ## Testing the Architecture and the individual microservices:
