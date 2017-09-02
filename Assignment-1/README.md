@@ -12,6 +12,8 @@ PYTHON (Flask)
 
 1. Install MongoDB, start the daemon mongod, which is essential for the microservices accessing the mongodb. Download the csv files from
    > https://github.com/airavata-courses/MethkupalliVasanth/tree/master/Assignment-1/data-mongo. 
+   
+   
 Create a database named bookstore in MongoDB and run the following commands to import the collections
    > $ mongoimport -d bookstore -c  --type csv --file book.csv --headerline
    
