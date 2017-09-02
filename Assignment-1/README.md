@@ -15,10 +15,10 @@ PYTHON (Flask)
    
    
 Create a database named bookstore in MongoDB cd into the mongo-db file directoryand run the following commands to import the collections
-   > $ mongoimport --db bookstore --collection  --type csv --file book.csv --headerline
+   > $ mongoimport --db bookstore --collection books  --type csv --file book.csv --headerline
    
    
-   > $ mongoimport --db bookstore --collection  --type csv --file genre.csv --headerline
+   > $ mongoimport --db bookstore --collection genres --type csv --file genre.csv --headerline
  
 2. Install Node.js
 3. Install Python 2.7.x and the latest Flask version.
