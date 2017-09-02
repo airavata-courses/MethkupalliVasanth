@@ -65,7 +65,11 @@ You can check the functioning of the the microservice from the orchestrator. Or 
 http://localhost:4567/hello/vasanth
 
 ### Running the Python Flask microservice
-1. Go to the python-microservice folder and run the following commands
+1. We need to install flask-pymongo. Activate your virtual environment and run the following commands.
+
+> $ pip install Flask-PyMongo
+
+2. Go to the python-microservice folder and run the following commands
 
 > python app.py
 
