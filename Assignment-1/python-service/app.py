@@ -3,6 +3,7 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 from flask_pymongo import PyMongo
+#hashed out the books implementation for now
 
 app = Flask(__name__)
 
@@ -14,16 +15,16 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def get_all_books():
-	book=mongo.db.books
+	#book=mongo.db.books
 
-	output = []
+	#output = []
 	#return collection
 	#return mongo.db.bookstore
-	for a in book:
-	 	output.append({'author' : a['author'], 'create_date' : a['create_date'], 'description':a['description'], 'genre': a['genres']})
+	#for a in book:
+	 	#output.append({'author' : a['author'], 'create_date' : a['create_date'], 'description':a['description'], 'genre': a['genres']})
 		#ouput.append({'author':a['author']})
-	return jsonify({'result':output})
-	#return "hello"
+	#return jsonify({'result':output})
+	return "hello"
 
 
 @app.route('/hello/<name>')

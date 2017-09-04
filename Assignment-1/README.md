@@ -1,6 +1,6 @@
 # MethkupalliVasanth
  
-Under Construction! Error with Python flask accessing the DB, in the process of fixing it.
+Assignment-1, related technologies and commands to execute the project.
 
 ## Technologies Used:
 
@@ -10,15 +10,18 @@ PYTHON (Flask)
 
 ## Requirements:
 
-1. Install MongoDB, start the daemon mongod, which is essential for the microservices accessing the mongodb. Download the csv files from https://github.com/airavata-courses/MethkupalliVasanth/tree/master/Assignment-1/data-mongo. 
-   Create a database named bookstore in MongoDB and run the following commands to import the collections
-   > $ mongoimport -d bookstore -c  --type csv --file book.csv --headerline
+1. Install MongoDB, start the daemon mongod, which is essential for the microservices accessing the mongodb. Download the csv files from
+   > https://github.com/airavata-courses/MethkupalliVasanth/tree/master/Assignment-1/data-mongo. 
    
    
-   > $ mongoimport -d bookstore -c  --type csv --file genre.csv --headerline
+Create a database named bookstore in MongoDB cd into the mongo-db file directoryand run the following commands to import the collections
+   > $ mongoimport --db bookstore --collection books  --type csv --file book.csv --headerline
+   
+   
+   > $ mongoimport --db bookstore --collection genres --type csv --file genre.csv --headerline
  
 2. Install Node.js
-3. Install Python 2.7.x and the latest Flask version.
+3. Install Python 2.7.x, the latest Flask version and the pymongo dependency.
 4. Install maven for running SparkJava Microservice.
 
 ## Testing the Architecture and the individual microservices:
@@ -61,8 +64,14 @@ Which shows us the database of books from the MongoDB
 You can check the functioning of the the microservice from the orchestrator. Or use the link below
 http://localhost:4567/hello/vasanth
 
+Returns a hello vasanth message 
+
 ### Running the Python Flask microservice
-1. Go to the python-microservice folder and run the following commands
+1. We need to install flask-pymongo. Activate your virtual environment and run the following commands.
+
+> $ pip install Flask-PyMongo
+
+2. Go to the python-microservice folder and run the following commands
 
 > python app.py
 
@@ -70,4 +79,15 @@ Check the functioning of the microservice from the orchestrator or use the link
 
 > http://127.0.0.1:5000/ 
 
-The above link, just displays a "Hello World Message", working on to include more functionality in this microservice.
+Returns a simple hello message.
+
+
+
+# References
+
+    i. https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
+    ii. http://sparkjava.com/documentation
+    iii. https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
+    iv. https://www.nginx.com/blog/introduction-to-microservices/
+
+
