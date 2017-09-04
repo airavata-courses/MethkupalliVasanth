@@ -64,6 +64,8 @@ Which shows us the database of books from the MongoDB
 You can check the functioning of the the microservice from the orchestrator. Or use the link below
 http://localhost:4567/hello/vasanth
 
+Returns a hello vasanth message 
+
 ### Running the Python Flask microservice
 1. We need to install flask-pymongo. Activate your virtual environment and run the following commands.
 
@@ -76,6 +78,8 @@ http://localhost:4567/hello/vasanth
 Check the functioning of the microservice from the orchestrator or use the link 
 
 > http://127.0.0.1:5000/ 
+
+Returns a simple hello message.
 
 
 
