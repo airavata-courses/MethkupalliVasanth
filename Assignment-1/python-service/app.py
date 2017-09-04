@@ -2,7 +2,7 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
-#from flask_pymongo import PyMongo
+from flask_pymongo import PyMongo
 #hashed out the books implementation for now
 
 app = Flask(__name__)
