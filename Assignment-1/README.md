@@ -77,4 +77,13 @@ Check the functioning of the microservice from the orchestrator or use the link
 
 > http://127.0.0.1:5000/ 
 
+
+
+# References
+
+    i. https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
+    ii. http://sparkjava.com/documentation
+    iii. https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
+    iv. https://www.nginx.com/blog/introduction-to-microservices/
+
 The above link, just displays a "Hello World Message", working on to include more functionality in this microservice.
