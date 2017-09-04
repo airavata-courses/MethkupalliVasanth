@@ -2,6 +2,11 @@
  
 Assignment-1, related technologies and commands to execute the project.
 
+## Architecture 
+
+![alt text](https://github.com/airavata-courses/MethkupalliVasanth/blob/master/Assignment-1/architecture-diagram/Arch.PNG)
+
+
 ## Technologies Used:
 
 JavaScript (Node.js)
