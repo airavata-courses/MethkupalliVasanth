@@ -1,6 +1,6 @@
 # MethkupalliVasanth
  
-Under Construction! Error with Python flask accessing the DB, in the process of fixing it.
+Assignment-1, related technologies and commands to execute the project.
 
 ## Technologies Used:
 
@@ -86,4 +86,4 @@ Check the functioning of the microservice from the orchestrator or use the link
     iii. https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd
     iv. https://www.nginx.com/blog/introduction-to-microservices/
 
-The above link, just displays a "Hello World Message", working on to include more functionality in this microservice.
+
