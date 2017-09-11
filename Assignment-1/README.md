@@ -44,6 +44,8 @@ You can test it at
 
 2. Before you access the microservices from the UI, start the individual microservices first.
 
+3. After starting the individual microservices, go inside node.js Orchestrator directory and open the index.html page, it has all the links for accessing the individual microservices.
+
 ### Running the node.js microservice
 1. Go to node-js-service folder and run the following command
 
@@ -53,7 +55,7 @@ You can test it by accessing the service from the orchestrator above.
 
 Also, you can check this at 
 
-> http://localhost:3000/api/books
+> http://localhost:20000/node
 
 Which shows us the database of books from the MongoDB
 
@@ -67,7 +69,7 @@ Which shows us the database of books from the MongoDB
 > java -jar demo-0.0.1-SNAPSHOT.jar
 
 You can check the functioning of the the microservice from the orchestrator. Or use the link below
-http://localhost:4567/hello/vasanth
+http://localhost:20000/spark
 
 Returns a hello vasanth message 
 
@@ -82,7 +84,8 @@ Returns a hello vasanth message
 
 Check the functioning of the microservice from the orchestrator or use the link 
 
-> http://127.0.0.1:5000/ 
+> http://localhost:20000/python
+ 
 
 Returns a simple hello message.
 
