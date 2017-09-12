@@ -1,86 +1,97 @@
-var express = require('express');
-//object to represent express
-var app = express();
 
 
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 
+var restify = require('restify');
+var request = require('request');
+var url = require('url');
 
-app.use(express.static(__dirname+'/client'));
-app.use(bodyParser.json());
-
-app.set('port', process.env.PORT || 20000);
-
-Genre = require('./models/genre.js')
-Book = require('./models/book.js')
-
-// Connect to Mongoose
-mongoose.connect('mongodb://localhost/bookstore');
-var db = mongoose.connection;
-
-
-// Handle get requests, http requests for the home page
-app.get('/', function(req, res){
-	res.send('');
+var server = restify.createServer();
+server.listen(20000, function(){
+	console.log('%s listening at %s', server.name, server.url);
 });
 
-//python flask microservice
-app.get('http://127.0.0.1:5000/', function(req,res){
-	res.send('');
-});
+/*
+binding the api calls to the api server implemented in node.js
 
-//java spark microservice
-app.get('http://localhost:8080/', function(req,res){
-
-});
+*/
 
 
-app.get('')
-app.get('/api/genres', function(req, res){
-	Genre.getGenres(function(err, genres){
-		if(err){
-			throw err;
-		}
-		res.json(genres);
+server.get('/node', node1);
+server.get('/python', python1);
+server.get('/spark', spark1);
+
+
+
+function node1(req, res, next){
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	res.setHeader('content-type', 'application/json');
+	res.writeHead(200);
+
+
+	
+	
+	
+	var ms1 =" http://localhost:3000/api/books";
+	
+	var myurl = ms1 ;
+
+	request(myurl, function(error, response, body){
+		res.write(body);
+		res.end();
+		return next();
+	});
+}
+
+
+function python1(req, res, next){
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	res.setHeader('content-type', 'application/json');
+	res.writeHead(200);
+
+
+	
+	
+	
+	var ms1 ="http://127.0.0.1:5000/";
+	
+	var myurl = ms1 ;
+
+	request(myurl, function(error, response, body){
+		res.write(body);
+		res.end();
+		return next();
 	});
 
-});
+}
 
 
-app.post('/api/genres', function(req, res){
-	var genre = req.body;
-	// allows us to access the form and put into genre
-	Genre.addGenre(genre, function(err, genre){
-		if(err){
-			throw err;
-		}
-		res.json(genre);
+function spark1(req, res, next){
+	res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+	res.setHeader('content-type', 'application/json');
+	res.writeHead(200);
+
+
+	
+	
+	
+	var ms1 ="http://localhost:4567/hello";
+	
+	var myurl = ms1 ;
+
+	request(myurl, function(error, response, body){
+		res.write(body);
+		res.end();
+		return next();
 	});
 
-});
 
 
-app.get('/api/books', function(req, res){
-	Book.getBooks(function(err, books){
-		if(err){
-			throw err;
-		}
-		res.json(books);
-	});
+}
 
-});
 
-app.get('/api/books/:_id', function(req, res){
-	Book.getBookById(req.params._id, function(err, book){
-		if(err){
-			throw err;
-		}
-		res.json(book);
-	});
-
-});
-app.listen(app.get('port'));
 
 
 
