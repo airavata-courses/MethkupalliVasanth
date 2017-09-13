@@ -44,7 +44,7 @@ You can test it at
 
 2. Before you access the microservices from the UI, start the individual microservices first.
 
-3. After starting the individual microservices, go inside node.js Orchestrator directory and open the index.html page, it has all the links for accessing the individual microservices.
+3. After starting the individual microservices, open the index.html page, it has all the links for accessing the individual microservices.
 
 ### Running the node.js microservice
 1. Go to node-js-service folder and run the following command
