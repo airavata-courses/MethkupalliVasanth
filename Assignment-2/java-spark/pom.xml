@@ -39,7 +39,12 @@
 			<groupId>com.sparkjava</groupId>
     			<artifactId>spark-core</artifactId>
     			<version>2.6.0</version>
-		</dependency>		
+		</dependency>
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+  			<artifactId>amqp-client</artifactId>
+  			<version>4.2.1</version>
+		</dependency>			
 
 	</dependencies>
 
