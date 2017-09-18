@@ -106,7 +106,7 @@ function rabbit(req, res, next){
 
 var amqp = require('amqplib/callback_api');
 
-amqp.connect('amqp://localhost', function(err, conn) {
+amqp.connect('amqp://127.0.0.1', function(err, conn) {
   conn.createChannel(function(err, ch) {
     var q = 'rpc_queue';
 

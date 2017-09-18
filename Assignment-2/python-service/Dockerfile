@@ -1,7 +1,10 @@
 FROM python:3
 COPY . /app
 WORKDIR /app
-RUN pip install requirements.txt
-EXPOSE 5000 15672
+RUN pip install pika
+EXPOSE 5000 
 ENTRYPOINT ["python"]
-CMD ["pyserver.py"]
+CMD ["receiver_rpc.py"]
+
+
+

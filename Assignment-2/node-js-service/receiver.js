@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 var amqp = require('amqplib/callback_api');
 
 var args = process.argv.slice(2);
@@ -8,7 +8,7 @@ if (args.length == 0) {
   process.exit(1);
 }
 
-amqp.connect('amqp://localhost', function(err, conn) {
+amqp.connect('amqp://127.0.0.1', function(err, conn) {
   conn.createChannel(function(err, ch) {
     ch.assertQueue('', {exclusive: true}, function(err, q) {
       var corr = generateUuid();
