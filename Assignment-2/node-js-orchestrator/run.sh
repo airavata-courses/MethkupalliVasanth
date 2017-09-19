@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo docker run -d --hostname rabbitmq-host --name some-rabbit --net="host" -p 5672 -p 15672 rabbitmq:3-management
 
 sudo docker build -t msorch .
