@@ -17,7 +17,7 @@ sudo bash run.sh'''
 
 
 sudo bash run.sh'''
-        sh '''cd Assignment-2 && cd java-service  &&
+        sh '''cd Assignment-2 && cd java-spark  &&
 
 
 sudo bash run.sh'''
