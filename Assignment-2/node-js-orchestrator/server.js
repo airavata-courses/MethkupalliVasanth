@@ -1,6 +1,4 @@
 
-
-
 var restify = require('restify');
 var request = require('request');
 var url = require('url');
@@ -24,6 +22,12 @@ server.get('/rabbitmq', rabbit);
 server.get('/node', node1);
 server.get('/python', python1);
 server.get('/spark', spark1);
+
+
+server.get(/.*/, restify.plugins.serveStatic({
+	 directory: __dirname,
+	'default': 'index.html'
+}));
 
 
 

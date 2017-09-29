@@ -8,5 +8,5 @@ RUN npm install request
 RUN npm install url
 COPY . .
 EXPOSE 3000
-CMD ["node","app.js", "30"]
+CMD ["node","app.js", "30", ">logs_node.txt"]
 
