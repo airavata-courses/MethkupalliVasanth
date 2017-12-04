@@ -1,0 +1,6 @@
+---
+- hosts: test-vm-1
+  tags: pga
+  roles:
+    - env_setup
+    - pga
