@@ -32,9 +32,15 @@ It should work via
 This will both initialize a private network, with public router, 
 and create a new instance based on a 'm1.small' image.
  
-I don't have the file 'clouds.yaml' included in this public repo, which is a necessity. 
 
-It is equivalent to the openrc.sh - may be included later as a vault.
+
+
+
+# Work for Assignment-5, including the openrc.sh file or using vault to encrypt either the .sh file or the cloud.yaml file
+
+To take the credentials directly from the user for using the jetstream(tacc) for openstack, we can use one of the two methods to source the credentials. The first method is to directly source the .sh file downloaded from the API Access from the dashboard. Which is a crude and often unsafe method because it has all the passwords and open to attacks.
+
+Instead we go with using the cloud.yml file mentioned below, a sample included in the main directory. We need to fill the details using openrc.sh file which we download from the API Access.
 
 The basic format looks like:
 
@@ -50,6 +56,17 @@ clouds:
   project_domain_name: value
   identity_api_version: 3
 ```
+
+
+However, after filling the values in the clouds.yaml file we need to use vault for securing it. Following are the commands that need to be run, for encrypting the file, we will be using vault by ansible to achieve that. It has to be remembered that encryption can be performed on few sets of file formats like .yml and .json files only.
+
+This command is used to create an encrypted yml file, which asks for a password interactively. 
+`ansible-vault create clouds.yml`
+
+This command is used to run for decrypting the file and using the yml file.  
+`ansible-playbook clouds.yml --ask-vault-pass'
+
+
 
 Now with dynamic inventory (openstack.py).
 
