@@ -36,7 +36,9 @@ and create a new instance based on a 'm1.small' image.
 
 
 
-# Work for Assignment-5, including the openrc.sh file or using vault to encrypt either the .sh file or the cloud.yaml file
+# Work for Assignment-5
+
+## Including the openrc.sh file or using vault to encrypt the cloud.yml file
 
 To take the credentials directly from the user for using the jetstream(tacc) for openstack, we can use one of the two methods to source the credentials. The first method is to directly source the .sh file downloaded from the API Access from the dashboard. Which is a crude and often unsafe method because it has all the passwords and open to attacks.
 
