@@ -61,10 +61,12 @@ clouds:
 However, after filling the values in the clouds.yaml file we need to use vault for securing it. Following are the commands that need to be run, for encrypting the file, we will be using vault by ansible to achieve that. It has to be remembered that encryption can be performed on few sets of file formats like .yml and .json files only.
 
 This command is used to create an encrypted yml file, which asks for a password interactively. 
+
 `ansible-vault create clouds.yml`
 
 This command is used to run for decrypting the file and using the yml file.  
-`ansible-playbook clouds.yml --ask-vault-pass'
+
+`ansible-playbook clouds.yml --ask-vault-pass`
 
 
 
