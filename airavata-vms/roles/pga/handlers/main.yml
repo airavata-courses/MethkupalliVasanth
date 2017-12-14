@@ -1,0 +1,13 @@
+---
+
+- name: composer update
+  composer: command=update working_dir="{{ doc_root_dir }}"
+  become: yes
+
+- name: start httpd
+  service: name={{ httpd_name[ansible_os_family] }} state=started
+  become: yes
+
+- name: restart httpd
+  service: name={{ httpd_name[ansible_os_family] }} state=restarted
+  become: yes

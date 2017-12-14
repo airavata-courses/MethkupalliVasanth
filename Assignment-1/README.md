@@ -1,6 +1,6 @@
 # MethkupalliVasanth
  
-Assignment-1, related technologies and commands to execute the project.
+Assignment-1, related technologies and commands to execute them.
 
 ## Architecture 
 

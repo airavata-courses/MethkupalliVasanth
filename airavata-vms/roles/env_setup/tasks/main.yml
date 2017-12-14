@@ -1,0 +1,36 @@
+---
+#Tasks file can include smaller files if wanted
+#All commons tasks goes here
+- name: Create a new user group "{{ group }}"
+  group: name={{ group }}
+  become: yes
+
+- name: Create a new user "{{ user }}"
+  user: name={{ user }} group={{ group }}
+  become: yes
+
+- name: Install Firewalld (RedHat)
+  yum: name=firewalld state=latest update_cache=yes
+  become: yes
+  when: ansible_os_family == "RedHat"
+
+- name: Install Firewalld (Debian)
+  apt: name=firewalld state=latest update_cache=yes
+  become: yes
+  when: ansible_os_family == "Debian"
+
+
+  # TODO: stop iptables service, can't have both iptables and firewalld on same host
+# firewalld is just a frontend for iptables - so we can't remove it
+  # if we try to stop non existing service ansible fails.
+# - name: Stop iptables, ip6tables services
+#   service: name="{{ item }}" state=stopped
+#   with_items:
+#     - iptables
+#     - ip6tables
+
+- name: Start firewalld service
+  service: name=firewalld state=started
+  become: yes
+
+...

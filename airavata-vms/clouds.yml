@@ -1,0 +1,10 @@
+clouds:
+ tacc:
+  auth: 
+   username: "value"
+   auth_url: "value"
+   project_name: "value"
+   password: "value" 
+  user_domain_name: "value"
+  project_domain_name: "value"
+  identity_api_version: 3

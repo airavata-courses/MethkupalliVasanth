@@ -1,0 +1,4 @@
+---
+
+ - include: all_hosts.yml
+ - include: all_deploy.yml
